@@ -47,22 +47,7 @@ inline fun stillAlive(body: (String) -> String) {
 Using the `kotlinpoet-contracts-metadata-specs` artifact, you can convert Kotlin metadata representations 
 of contracts into a `ContractSpec`.
 
-```kotlin
-class GLaDOS {
-  inline fun stillAlive(body: (String) -> String) {
-    contract {
-      callsInPlace(body, InvocationKind.EXACTLY_ONCE)
-    }
-    println("This was a triumph.")
-  }
-}
-
-val typeSpec = GLaDOS::class.toTypeSpec()
-val funSpec = typeSpec.functions.find { it.name == "stillAlive" }
-
-// The ImmutableKmContract is stored as a tag on the created function if present.
-val contractSpec = funSpec.tags<ImmutableKmFunction>()?.contract?.toContractSpec()
-```
+TODO - KotlinPoet-metadata-specs doesn't support files with only top-level functions yet.
 
 ## Installation
 
