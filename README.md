@@ -66,7 +66,7 @@ val contractSpec = funSpec.tags<ImmutableKmFunction>()?.contract?.toContractSpec
 
 ## Installation
 
-Core contracts 
+Core `ContractSpec` + KotlinPoet extensions
 
 ```gradle
 implementation "dev.zacsweers.dev.zacsweers.kotlinpoetcontracts:kotlinpoet-contracts:{version}"
