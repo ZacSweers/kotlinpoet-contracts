@@ -24,6 +24,7 @@ import com.squareup.kotlinpoet.MemberName
 import com.squareup.kotlinpoet.ParameterSpec
 import com.squareup.kotlinpoet.Taggable
 import com.squareup.kotlinpoet.TypeName
+import com.squareup.kotlinpoet.tag
 import dev.zacsweers.kotlinpoet.contracts.ContractEffectType.CALLS
 import dev.zacsweers.kotlinpoet.contracts.ContractEffectType.RETURNS_CONSTANT
 import dev.zacsweers.kotlinpoet.contracts.ContractEffectType.RETURNS_NOT_NULL
@@ -642,6 +643,7 @@ fun FunSpec.withContract(contractSpec: ContractSpec) = run {
   toBuilder()
       .addCode(CodeBlock.builder().apply { contractSpec.emit(this, this@withContract) }.build())
       .addCode(body)
+      .tag(contractSpec)
       .build()
 }
 
