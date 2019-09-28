@@ -56,13 +56,13 @@ TODO - KotlinPoet-metadata-specs doesn't support files with only top-level funct
 Core `ContractSpec` + KotlinPoet extensions
 
 ```gradle
-implementation "dev.zacsweers.dev.zacsweers.kotlinpoetcontracts:kotlinpoet-contracts:{version}"
+implementation "dev.zacsweers.kotlinpoetcontracts:kotlinpoet-contracts:{version}"
 ```
 
 Metadata extensions
 
 ```gradle
-implementation "dev.zacsweers.dev.zacsweers.kotlinpoetcontracts:kotlinpoet-contracts-metadata-specs:{version}"
+implementation "dev.zacsweers.kotlinpoetcontracts:kotlinpoet-contracts-metadata-specs:{version}"
 ```
 
 License
