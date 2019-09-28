@@ -66,12 +66,13 @@ val contractSpec = funSpec.tags<ImmutableKmFunction>()?.contract?.toContractSpec
 
 ## Installation
 
-Gradle dependency:
-
 Core contracts 
+
 ```gradle
 implementation "dev.zacsweers.dev.zacsweers.kotlinpoetcontracts:kotlinpoet-contracts:{version}"
 ```
+
+Metadata extensions
 
 ```gradle
 implementation "dev.zacsweers.dev.zacsweers.kotlinpoetcontracts:kotlinpoet-contracts-metadata-specs:{version}"
