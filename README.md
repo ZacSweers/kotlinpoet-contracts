@@ -26,7 +26,8 @@ You can create a function with it from an existing function via `withContract()`
 val function = FunSpec.builder("stillAlive")
     .addModifiers(KModifier.INLINE)
     .addParameter(param)
-    .addStatement("println(%S)", "This was a triumph.")
+    .addStatement("val result = body()")
+    .addStatement("println(%S)", "This was a triumph: $result")
     .build()
     .withContract(contractSpec)
 ```
@@ -38,7 +39,8 @@ inline fun stillAlive(body: (String) -> String) {
   contract {
     callsInPlace(body, InvocationKind.EXACTLY_ONCE)
   }
-  println("This was a triumph.")
+  val result = body()
+  println("This was a triumph: $result")
 }
 ```
 
